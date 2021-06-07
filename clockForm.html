@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form onsubmit="createSession()" id="form">
+      <div id="notes-list">
+        <div>
+          <input type="text" placeholder="Enter a note"/>
+          <input type="number" min="1" max="16" value="4"/>
+        </div>
+      </div>
+      <input type="button" value="Add another note" onclick="addNote()" />
+      <input type="submit" value="Submit"/>
+    </form>
+
+    <script type="text/javascript" src="submitForm.js"></script>
+  </body>
+</html>
