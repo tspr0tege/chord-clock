@@ -5,7 +5,26 @@ form.addEventListener('submit', createSession);
 
 function createSession(e) {
   e.preventDefault();
-  console.log(e.target.elements[1].value);
+  // console.log(e.target.elements);
+  let formData = e.target.elements;
+  let sessionClock = {
+    bpm: formData.unshift(),
+    notes: []
+  };
+  // let bpm = formdata.unshift();
+  
+  for (let i = 0; i < formData.length - 2; i++) {
+    if (i % 2 === 0){
+      sessionClock.notes.push(formData[i].value);
+    } else {
+      for (let j = 1; j < formData[i].value; j++){
+        sessionClock.notes.push(0);
+      }
+    }
+  }
+
+  sessionStorage.setItem('sessionClock', JSON.stringify(sessionClock));
+  location.href = './index.html'
 }
 
 function addNote() {
