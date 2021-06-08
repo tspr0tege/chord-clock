@@ -5,16 +5,16 @@ form.addEventListener('submit', createSession);
 
 function createSession(e) {
   e.preventDefault();
-  // console.log(e.target.elements);
+  console.log(e.target.elements);
   let formData = e.target.elements;
   let sessionClock = {
-    bpm: formData.unshift(),
+    bpm: formData[0].value,
     notes: []
   };
   // let bpm = formdata.unshift();
   
-  for (let i = 0; i < formData.length - 2; i++) {
-    if (i % 2 === 0){
+  for (let i = 1; i < formData.length - 2; i++) {
+    if (i % 2 !== 0){
       sessionClock.notes.push(formData[i].value);
     } else {
       for (let j = 1; j < formData[i].value; j++){

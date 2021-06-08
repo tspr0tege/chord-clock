@@ -54,12 +54,12 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 5px;
-    height: 15px;
-    background-color: black;
+    width: 2px;
+    height: 50%;
+    background-color: #ccc;
 }
 
-.hand {
+#hand {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -67,27 +67,31 @@ body {
     left: 0;
 }
 
-.hand div {
+#hand div {
     position: absolute;
     bottom: 50%;
     left: 50%;
     transform: translateX(-50%);
     background-color: black;
+    height: 38%;
+    width: 4px;
+    border-radius: 2px;
 }
 
-.sec {
+.note-text {
+    margin-top: -75px;
+}
+
+/* .sec {
     width: 1px;
     height: 40%;
 }
 
 .min {
-    height: 38%;
-    width: 4px;
-    border-radius: 2px;
 }
 
 .hour {
     height: 28%;
     width: 8px;
     border-radius: 8px;
-}
+} */
