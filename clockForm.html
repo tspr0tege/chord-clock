@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <form id="form">
@@ -9,13 +10,13 @@
         <input type="text" id="bpm" placeholder="Beats per minute"/>
       </label>
       <div id="notes-list">
-        <div>
-          <input type="text" placeholder="Enter a note"/>
+        <div class="chord-input-div">
+          <input type="text" placeholder="Enter a chord"/>
           <input type="number" min="1" max="16" value="4"/>
         </div>
       </div>
-      <input type="button" value="Add another note" onclick="addNote()" />
-      <input type="submit" value="Submit"/>
+      <input type="button" class="styled-btn" value="Add another chord" onclick="addNote()" />
+      <input type="submit" class="styled-btn" value="Submit"/>
     </form>
 
     <script type="text/javascript" src="submitForm.js"></script>

@@ -5,13 +5,12 @@ form.addEventListener('submit', createSession);
 
 function createSession(e) {
   e.preventDefault();
-  console.log(e.target.elements);
+  // console.log(e.target.elements);
   let formData = e.target.elements;
   let sessionClock = {
     bpm: formData[0].value,
     notes: []
   };
-  // let bpm = formdata.unshift();
   
   for (let i = 1; i < formData.length - 2; i++) {
     if (i % 2 !== 0){
@@ -24,12 +23,13 @@ function createSession(e) {
   }
 
   sessionStorage.setItem('sessionClock', JSON.stringify(sessionClock));
-  location.href = './index.html'
+  location.href = './chordClock.html'
 }
 
 function addNote() {
   
   let newDiv = document.createElement('div');
+  newDiv.classList.add('chord-input-div');
   
   let text = document.createElement('input');
   text.setAttribute('type', 'text');
